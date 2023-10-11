@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+           const one = ()=> {
+            let a = document.getElementById("myname").value;
+            document.getElementById("xyz").innerText=a;
+            document.getElementById("total").innerText=a.length;
+
+           }
+        </script>
+    </head>
+    <body>
+        <h1> .value and innerText Example </h1>
+        <p> .value will bring data from HTML to javascript </p> // for all the input tags
+        <p> .innerText will send data from javascript to HTML</p> //for output tag
+        <p> Enter Your Name : <input type="text" id="myname" onkeyup="one()" maxlength="100"/>
+        </p>
+       
+        <h1 id="total"> 0 </h1>
+        <p id="xyz"> ----- </p>
+    </body>
+</html>

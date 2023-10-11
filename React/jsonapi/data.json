@@ -1,0 +1,11 @@
+{
+    "user": [
+        {"id":1,"fullname":"Ganesh" , "age":"40 Years", "city":"Bangalore", "edu":"MCA"},
+        {"id":2,"fullname":"Taneem" , "age":"30 Years", "city":"Pune", "edu":"Mcom"},
+        {"id":3,"fullname":"Tanu" , "age":"50 Years", "city":"Bhopal", "edu":"BCA"}
+
+    ],
+    
+    "book": [],
+    "product": []
+}

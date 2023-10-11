@@ -1,0 +1,257 @@
+Bootstrap is library of css.(it is a ready made css file)
+it is also called first framework of html,css,javascriptintroduced by twitter in 
+2011.
+
+it has collections of pre-defined css classes fpr responsive webpage design.
+the bootstrap grid system has devided all type of devices in 6 categories based on screen width.
+
+1.extra small - 1px to 576px screen width
+2.small       - 577px to 768px screen width
+3.medium      - 769px to 992px screen width
+4.large       -993px to 1200px screen width
+5.extra large - 1200px to 1400px
+6.extra extra large - >1400px screen width
+
+The grid system has given twelve pre-defined classes for each category
+
+1.extra small
+   .col-1
+   .col-2
+   .col-3
+   .col-4
+   .col-5
+   .col-6
+   .col-7
+   .col-8
+   .col-9
+   .col-10
+   .col-11
+   .col-12
+   ---------------------------
+   2.small 
+   .col-sm-1
+   .col-sm-2
+   .col-sm-3
+   .col-sm-4
+   .col-sm-5
+   .col-sm-6
+   .col-sm-7
+   .col-sm-8
+   .col-sm-9
+   .col-sm-10
+   .col-sm-11
+   .col-sm-12
+   -----------------------------------
+3.medium 
+   .col-md-1
+   .col-md-2
+   .col-md-3
+   .col-md-4
+   .col-md-5
+   .col-md-6
+   .col-md-7
+   .col-md-8
+   .col-md-9
+   .col-md-10
+   .col-md-11
+   .col-md-12
+   -----------------------------
+   4.large
+   .col-lg-1   =12
+   .col-lg-2   =12%2=6
+   .col-lg-3   =12%3=4
+   .col-lg-4   =12%4=3
+   .col-lg-5   =12%5=5=5 2
+   .col-lg-6   =12%6=2
+   .col-lg-7
+   .col-lg-8
+   .col-lg-9
+   .col-lg-10
+   .col-lg-11
+   .col-lg-12   =12%12=1
+   ---------------------------------------
+   5.extra large
+    .col-xl-1
+   .col-xl-2
+   .col-xl-3
+   .col-xl-4
+   .col-xl-5
+   .col-xl-6
+   .col-xl-7
+   .col-xl-8
+   .col-xl-9
+   .col-xl-10
+   .col-xl-11
+   .col-xl-12
+   -------------------------------------------
+   6.extra extra large
+     .col-xxl-1
+     .col-xxl-2
+   .col-xxl-3
+   .col-xxl-4
+   .col-xxl-5
+   .col-xxl-6
+   .col-xxl-7
+   .col-xxl-8
+   .col-xxl-9
+   .col-xxl-10
+   .col-xxl-11
+   .col-xxl-12
+   ---------------------------------------------------
+   72 classes in grid system
+ -----------------------------------------------------
+ How to use 72 classes of grid system
+ ->while creating webpage using bootstrap follow these steps
+ 1. link to bootstrap.css in head section
+ 2. Follow body tag
+ 3. inside body, follow these  classes
+   -container - it has margin from left and right
+   -container-fluid - it has no margin from either side
+4. inside .container , .container-fluid use the classes
+    .raw-height is auto where width is 100% of parent element
+5.inside the .row,follow colums
+   ->inside each row use minimum one column and max 12 column.
+
+   body > container / container-fluid >row > columns(min 1, max12) > data
+   ----------------------------------------------------------------------------------------
+   container
+   container-fluid
+   row
+   ------------------------------------------------------------
+   classes for margin and padding
+     .m-margin
+     .p-padding
+     .t-top
+     .b-bottom
+     .l-left
+     .r-right
+
+     1 -4px
+     2 -8px
+     3 -16px
+     4 -24px
+     5 -48px
+------------------------------------------------------
+     .m-1 =margin 4px from all side
+     .m-2 =margin 8px from all side
+     .m-3 =margin 16px from all side
+     .m-4 =margin 24px from all side
+     .m-5 =margin 48px from all side
+
+     .m-1, .m-2, .m-3,.m-4, .m-5
+     .m1-1, .m1-2, .m1-3, .m1-4, .m1-5
+     .mr-1, .mr-2, .mr-3, .mr-4, .mr-5
+     .mt-1, .mt-2, .mt-3, .mt-4, .mt-5
+     .mb-1, .mb-2, .mb-3, .mb-4, .mb-5
+
+       .p-1, .p-2, .p-3,.p-4, .p-5
+     .ps-1, .ps-2, .ps-3, .ps-4, .ps-5
+     .pe-1, .pe-2, .pe-3, .pe-4, .pe-5
+     .pt-1, .pt-2, .pt-3, .pt-4, .pt-5
+     .pb-1, .pb-2, .pb-3, .pb-4, .pb-5
+-----------------------------------------------
+classes for image     image.html
+.img-fluid - it controls the width of the image
+.img -thumbnail
+----------------------------------------
+classes for radius
+  .rounded -it apply radius
+  .rounded-circle -50% radius
+---------------------------------------------
+class for text color
+  .text-info  - skyblue
+  .text-primary  -blue
+  .text-warning  -yellow
+  .text-danger  -red
+  .text-success  - green
+  .text-secondary -grey
+  .text-white     -white
+  .text-dark     -black
+  .text-muted -like disabled
+
+  -------------------------------------------
+  classes for background color
+   .bg-info  - skyblue
+  .bg-primary  -blue
+  .bg-warning  -yellow
+  .bg-danger  -red
+  .bg-success  - green
+  .bg-secondary -grey
+  .bg-white     -white
+  .bg-dark     -black
+  .bg-light -light white
+  -----------------------------------------------
+  classes for box shadow
+    .shadow-sm
+    .shadow
+    .shadow-lg
+    ----------------------------------------
+    150+
+
+    classes for table
+    .table
+    .table-sm
+    .table-bordered
+    .table-striped
+    .table-hover
+    --------------------------------------------
+    classes for left navigation
+     .list-group
+       .list-group-item
+       .active
+    ----------------------------------------------
+       classes for card
+       .card
+          .card-header
+          .card-body
+          .card-footer
+    -----------------------------------------------
+     classes for input elements
+       .form-control-use for (text,password,email,number,textarea,data datatime-local,file)
+      ->form control size applicable in above both classes
+       .form-control-sm (small height)
+       .form-control-md (medium height)
+       .form-control-lg (large height)
+ -------------------------------------------------
+       classes for button
+  .btn
+  .btn-info  - skyblue
+  .btn-primary  -blue
+  .btn-warning  -yellow
+  .btn-danger  -red
+  .btn-success  - green
+  .btn-secondary -grey
+  .btn-white     -white
+  .btn-dark     -black
+  .btn-light -light white
+
+  ->button size
+   .btn-sm
+   .btn-lg
+  -----------------------------------------
+  button with bordered
+  .bg-outline-info  - skyblue
+  .btn-outline-primary  -blue
+  .btn-outline-warning  -yellow
+  .btn-outline-danger  -red
+  .btn-outline-success  - green
+  .btn-outline-secondary -grey
+  .btn-outline-white     -white
+  .btn-outline-dark     -black
+  .btn-outline-light -light white
+
+  ->for button group
+   .btn-group -it remove margin of 2 buttons
+  ---------------------------------------------
+  classes for bordered
+  .border -all side border
+  .border-left
+  .border-right
+  .border-top
+  .border-bottom
+  -----------------------------------------
+  classes for text alignment
+     .text-start (left align)
+     .text-center(center align)
+     .text-end (right align)
+     -----------------------------

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const save =()=>{
+                let a= document.getElementById("myname").value;
+                document.getElementById("total").innerHTML = "<p>" + a + " - " + a.length + "</p>";
+
+            }
+           
+        </script>
+    </head>
+    <body>
+        <h3 class="text-center" > Assignment 1 </h3>
+        <div>
+            <p>
+           Enter Name: <input type="text" id="myname"/>
+        </p>
+            <button onclick="save()"> Save </button>
+        </div>
+   
+        <p id="total">---------------</p>
+    </body>
+</html>

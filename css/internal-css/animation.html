@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1{
+                font-size:50px;
+                text-align: center;
+            }
+
+            /* Animation Start */
+            @keyframes mybanner{
+                25%{  background:red;font-size:30px; }
+                50%{  background:green; font-size:60px;}
+                75%{  background:yellow; font-size:80px;}
+            }
+            /* Animation End */
+
+            #banner{
+                height:300px;
+                padding:100px;
+                background:skyblue;
+                text-align: center;
+                font-size: 100px;
+                color:white;
+                animation:mybanner;
+                animation-duration:10s;
+                animation-iteration-count: infinite;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> CSS Animation </h1>
+        <section id="banner"> This is CSS Animated Banner </section>
+    </body>
+</html>

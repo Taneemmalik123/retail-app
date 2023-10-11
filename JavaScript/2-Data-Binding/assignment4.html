@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+          const one = () =>{
+            let fullname=document.getElementById("fname").value;
+             document.getElementById("myname").innerHTML=fullname;
+          }
+        </script>
+    </head>
+    <body>
+        <h1> Welcom to innertext anf innerhtml</h1>
+        <p>
+            Enter Your Name:<input type="text" id="fname" value=""/>
+            <button onclick="one()"> Save </button>
+        </p>
+
+        <h1 id="myname"></h1>
+    </body>
+</html>

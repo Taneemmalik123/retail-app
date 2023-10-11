@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            section{text-align: center;padding: 20px;}
+            h1{ color:blue; font-size: 70px; text-align: center;}
+            #container{width: 80%; margin: auto;}
+            p{font-size: 40px; width: 20%; margin: 2%; display: inline-block;}
+            button{margin: 10px;}
+            button:focus{background: red; color: white;}
+            .red{color:red;}
+            .green{color:green;}
+            .purple{color:purple;font-size: 20px;}
+            li{
+                line-height:35px;
+                color:blue;
+                font-size:20px;
+             }
+             fieldset{
+                border:10px groove orange;
+             }
+
+             legend{
+                background:purple;
+                color:white;
+                font-size: 25px;
+                padding:6px 20px 6px
+             }
+            
+        </style>
+        <script>
+           class Mypage{
+              constructor(){
+                this.customer=["Alex" , "Bunty" , "Dolly", "Eli" , "Farhad" , "goldi" , "Irfan"];
+                this.product=["Pen", "Marker" ,"Book", "Laptop","Mouse","Keyboard","Printer"];
+                this.service=["Website design", "Logo design" , "App design" , "API Development" , "BPO"];
+              }
+               
+              getservice=()=>{
+                let data="<h1> Service List </h1> ";
+                for(let i=0;i<this.service.length;i++)
+                {
+                    data = data + "<p class='purple'>" + this.service[i] + "</p>";
+                }
+                document.getElementById("container").innerHTML = data;
+
+              }
+
+
+              getproduct=()=>{
+                let data="<h1> Product List </h1> ";
+                for(let i=0;i<this.product.length;i++)
+                {
+                    data = data + "<p class='red'>" + this.product[i] + "</p>";
+                }
+                document.getElementById("container").innerHTML = data;
+
+              }
+
+           home = () =>{
+            let msg  = "<h1> Welcome To Class OBject </h1>";
+            document.getElementById("container").innerHTML = msg;
+           }
+
+           about = () =>{
+            let msg  = "<h1> About Us </h1>";
+            document.getElementById("container").innerHTML = msg;
+           }
+
+           getcustomer = () =>{
+            let data="<h1> Customer List </h1>";
+            this.customer.map((fullname,index)=>{
+                data = data + "<p class='green'>" +  fullname + "</p>";
+            })
+            document.getElementById("container").innerHTML=data;
+           }
+    
+          savecustomer = () =>{
+                    let newcustomer = document.getElementById("cname").value;
+                    if(newcustomer !="" ){
+                        this.customer.push(newcustomer);
+                        this.getcustomer(); // to reload the list 
+                        document.getElementById("cname").value="";
+                    }else{
+                        alert("Invalid Customer Name...");
+                    }
+                }
+        }
+           const obj2 = new Mypage();
+           
+        </script>
+    </head>
+    <body>
+        <section align="center" >
+            <button onclick="obj2.home()"> Home </button>
+            <button onclick="obj2.about()"> About Us</button>
+            <button onclick="obj2.getcustomer()"> Customer List </button>
+            <button onclick="obj2.getproduct()"> Product List</button>
+            <button onclick="obj2.getservice()"> Service List </button>
+            
+ </section>
+
+ <div align="center">
+    Enter Customer Name : <input type="text" id="cname"/>
+    <button onclick="obj2.savecustomer()">Save customer</button>
+</div>
+
+<fieldset style="width:80%; margin:auto;">
+<legend>About Class & Object</legend>
+<ui>
+    <li>class ? : The class is collections of MEMBER VARIABLE AND MEMBER function</li>
+    <li> Member variable ? The variables defined under constructure using "this" operator 
+        as this.customer this.product, this.service, the member variable are global variable of the class.
+    </li>
+    <li> Member function ? All user defined function inside a class is called member function.
+        as savecustomer(), getservice(), getproduct(), about()
+    </li>
+    <li>constructor ? : The constructor is pre defined function of javascript class
+         it is also called as life cycle function of javascript class. 
+        it get called automatically when object of a class get created.
+    </li>
+    <li> this ? the "this" is a reserve keyword that work like object of current class. 
+        it is use to access member variable and member function but only inside the class
+    </li>
+    <li> object ? the "object" is instance of a class in javascript </li>
+    <li> extends ? : the extends keyword use to inherit feature from 1 class to other</li>
+
+</ui>
+
+</fieldset>
+ <div id="container" align="center">
+
+ </div>
+    </body>
+</html>

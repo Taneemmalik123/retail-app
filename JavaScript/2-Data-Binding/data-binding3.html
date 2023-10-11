@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+           const one = ()=> {
+            let a = document.getElementById("myname").value;
+            document.getElementById("xyz").innerText=a;
+
+           }
+           const two = ()=> {
+            let a = document.getElementById("myhome").value;
+            document.getElementById("xyz").innerText=a;
+
+           }
+        </script>
+    </head>
+    <body>
+        <h1> .value and innerText Example </h1>
+        <p> .value will bring data from HTML to javascript </p> // for all the input ytags
+        <p> .innerText will send data from javascript to HTML</p> //for output tag
+        <p> Enter Your Name : <input type="text" id="myname"/>
+        <button onclick="one()"> Print My Name </button>
+        </p>
+        <p>
+            Enter Your Home : <input type="text" id="myhome"/>
+        <button onclick="two()"> Print My Home </button>
+     </p>
+       
+        <h1 id="">--------------</h1>
+    </body>
+</html>

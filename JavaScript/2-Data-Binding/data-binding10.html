@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            p{
+                display:inline-block;
+                margin:2%;
+                width:20%;
+                font-size:px;
+                color:red;
+            }
+    
+        
+         #container{
+            width:80%; margin:auto;
+         }
+         header{text-align:center; padding:20px;}
+         button:focus{ background:red; color:white;}
+        
+        </style>
+        <script>
+            const getuser=()=>{
+                let userlist=["Alex", "Sunil","Amit","Krish", "saba","roshni"]
+                let temp="";
+                for(let i=0; i<userlist.length;i++)
+                {
+                    temp=temp +  "<p>" + userlist[i] + "</p>";
+
+                }
+               // alert(temp);
+                document.getElementById("container").innerHTML =temp;
+
+            }
+
+            const getcity=()=>{
+                let citylist=["Bangalore" , "Chennai", "Pune", "Delhi", "Kashmir"];
+                let temp="";
+                let i=0;
+                while(i< citylist.length)
+                {
+                    temp=temp +  "<p>" + citylist[i] + "</p>";
+                    i++;
+
+
+                }
+                document.getElementById("container").innerHTML =temp;
+               }
+
+               const getjob =()=>{
+                let joblist = ["HTML Developer", "Css Developer", "node Developer","PHP Developer"];
+                let temp="";
+                joblist.map((jobtitle,index) =>{
+                temp=temp +  "<p>" + jobtitle + "</p>";
+                 })
+                 document.getElementById("container").innerHTML =temp;
+                }
+
+                const getbook = ()=>{
+                    let booklist=["css" , "bootstrap", "javascript", "php", "html"];
+                    let temp="";
+                    booklist.forEach((bookname,index) =>{
+                temp=temp +  "<p>" + bookname + "</p>";
+                 })
+                 document.getElementById("container").innerHTML =temp;
+                }
+                 const getnumber =()=>{
+                    let start = prompt("Enter Starting Number");
+                    let end = prompt ("Enter Ending Number");
+                    let temp ="";
+                     
+                    for(let i = start ; i<=end;i++){
+                    temp=temp +  "<p>" + i + "</p>";
+
+                }
+                document.getElementById("container").innerHTML =temp;
+               }
+
+               
+
+                 
+
+        </script>
+    </head>
+    <body>
+        <header>
+        <button onclick="getuser()"> User List</button>
+        <button onclick="getcity()"> City List</button>
+        <button onclick="getjob()"> Job List</button>
+        <button onclick="getbook()"> Book List</button>
+        <button onclick ="getnumber()"> Print Desire NUmber </button> 
+
+    </header>
+    <section id="container"></section>
+    </body>
+</html>

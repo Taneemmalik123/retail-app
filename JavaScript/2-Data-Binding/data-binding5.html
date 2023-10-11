@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+          const one =() =>{
+            let name = document.getElementById("fullname").value;
+            alert(name);
+            document.getElementById("myname").innerText=name;
+
+            let mobile=document.getElementById("mobile").value;
+            document.getElementById("mymobile").innerText=mobile;
+
+            let email=document.getElementById("email-id").value;
+            document.getElementById("myemail").innerText=email;
+
+            let education=document.getElementById("education").value;
+            document.getElementById("myeducation").innerText=education;
+
+            
+            let address=document.getElementById("address").value;
+            document.getElementById("myaddress").innerText=education;
+              
+          }
+        </script>
+    </head>
+    <body>
+       <h1> .value and innerText , input & output Example </h1>
+        <p> Enter Name : <input type="text" id="fullname"/>  </p>
+        <p> Mobile No: <input type="number" id="mobile"/>  </p>
+        <p> Email-Id: <input type="email" id="email-id"/> </p>
+        <p> Education: <input type="text" id="education"/>  </p>
+        <p> <textarea id="address" cols="30"></textarea></p>
+        
+        <button onclick="one()"> Print Data </button>
+    </body>
+
+    <h2> My Details Are </h2>
+    <p id="myname"></p>
+    <p id="mymobile"></p>
+    <p id="myemail"></p>
+    <p id="myeducation"></p>
+    <p id="myaddress"></p>
+
+    
+</html>

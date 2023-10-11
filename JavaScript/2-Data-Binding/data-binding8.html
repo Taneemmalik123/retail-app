@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            img:hover{
+               opacity:0.5;
+               cursor:pointer;
+            }
+        </style>
+        <script>
+            const one=(picname)=>{
+              // alert( picname );
+                document.getElementById("mypic").src=picname;
+            }
+            const resize = (h,w)=>{
+                alert( h + "----" + w);
+                document.getElementById("mypic").height=h;
+                document.getElementById("mypic").width=w;
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+        <h1> Javascript & image Handling </h1>
+        <p>
+            <button onclick="resize(500,600)"> Large </button>
+            <button onclick="resize(300,300)"> Medium </button>
+            <button onclick="resize(200,200)"> Small </button>
+
+        </p>
+        <img src = "1.jpg" height="400" width ="500" id="mypic"/>
+        <p>
+            <img src="1.jpg" height="80" width="90" onmouseenter="one('1.jpg')"/>
+            <img src="2.jpg" height="80" width="90" onmouseenter="one('2.jpg')"/>
+            <img src="3.jpg" height="80" width="90" onmouseenter="one('3.jpg')"/>
+            <img src="4.jpg" height="80" width="90" onmouseenter="one('4.jpg')"/>
+         </p>
+        </center>
+    </body>
+</html>

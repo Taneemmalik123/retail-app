@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Form 2</title>
+    </head>
+    <body>
+        <table align="center" cellpadding="15" width=""50%>
+          <tr>
+            <td> <a href="form2.html"> Form 2</a></td>
+            <td> <a href="form3.html"> Form 3</a></td>
+            <td> <a href="form4.html"> Form 4</a></td>
+            <td> <a href="form5.html"> Form 5</a></td>.
+            <td> <a href="form6.html"> Form 6</a></td>
+          </tr>
+        </table>
+        <hr color="red" size="2"/>
+        <h1 align="center"> Form 2 </h1>
+        <form action="save.php" method="post" enctype="">
+         <!--METHOD CAN BE TAKEN AS POST TO ENCRYPT DATA, THIS PROCESS IS ALSO CALLED QUAERY STRING --> 
+          <table align="center" cellpadding="15">
+            <tr>
+              <th> Full Name</th>
+              <td> <input type="text" placeholder="Enter Your Name" name="abc" size="40" maxlength="50"/> </td>
+            </tr>
+            <tr>
+              <th> Mobile No </th>
+              <td> <input type="number" placeholder="Enter your No" name="xyz"/></td>
+            </tr>
+            <tr>
+              <th> Email Id </th>
+              <td> <input type="email" placeholder="Your Email Id" name="myemail" size="40" maxlenghth="50"></td>
+              
+            </tr>
+
+            <tr>
+              <th> Your message </th>
+              <td>
+                 <textarea placeholder="Enter Query" name="message" maxlength="200" rows="10" cols="40"></textarea>
+              </td>
+            </tr>
+             
+
+            <tr>
+              <th colspan= "2">
+                <button type="submit"> Send Message </button>
+              <button type="reset"> clear </button>
+              </th>
+            </tr>
+          </table>
+        </form>
+    </body>
+</html>

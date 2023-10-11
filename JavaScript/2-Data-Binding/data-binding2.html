@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            let message = "<h1>Mahesh</h1> <p> 45 Years </p> <p>MCA</p>";
+            message = message + "<p> 2010 </p>"
+            message = message + "<p> Bangalore</p>"
+            message = message + "<p> Karnataka </p>"
+
+
+            const one =()=>{
+            document.getElementById("xyz").innerHTML = message;
+       }
+
+            const two = () =>{
+                document.getElementById("xyz").innerText = message;
+
+            }
+        </script>
+    </head>
+    <body>
+        <h1> innerText & innerHTML </h1>
+        <button onclick ="one()"> View My Profile </button>
+        <button onclick ="two()"> View Source Code </button>
+        <br/><br/>
+
+        <div id="xyz"> </div>
+    </body>
+</html>

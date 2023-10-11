@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            p{
+                display:inline-block;
+                margin:2%;
+                width:20%;
+                font-size:px;
+                color:red;
+            }
+    
+        
+         #container{
+            width:80%; margin:auto;
+         }
+         header{text-align:center; padding:20px;}
+         button:focus{ background:red; color:white;}
+        
+        </style>
+        <script>
+         const xyz=()=>{
+            let data="9999999999";
+            let temp="";
+            for(let i=0;i<data.length;i++)
+            {
+                temp=temp+"<p>"+data[i]+"</p>";
+            }
+            document.getElementById("container").innerHTML=temp;
+         }
+        </script>
+    </head>
+    <body>
+        <button onclick="xyz()">Press Desire Number</button>
+    </body>
+    <section id="container"></section>
+</html>

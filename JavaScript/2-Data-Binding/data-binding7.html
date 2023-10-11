@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            fieldset{
+                width: 600px;
+                margin: auto;
+                border: 5px solid blue;
+                padding:20px;
+                vertical-align:top;
+                text-align: center;
+            }
+
+            legend{
+                background-color: red;
+                color: white;
+                padding: 8px;
+                font-size: 25px;
+            }
+        </style>
+        <script>
+                const one=() =>{
+                    let n1=document.getElementById("n1").value;
+                    let n2=document.getElementById("n2").value;
+                    let n3=parseInt(n1)+parseInt(n2};
+                    document.getElementById("result").innerText=n3;
+                }
+                const two=() =>{
+                    let n1=document.getElementById("n1").value;
+                    let n2=document.getElementById("n2").value;
+                    let n3=n1-n2;
+                    document.getElementById("Result").innerText=n3
+                }
+
+                const three=() =>{
+                    let n1=document.getElementById("n1").value;
+                    let n2=document.getElementById("n2").value;
+                    let n3=n1%n2;
+                    document.getElementById("Result").innerText=n3
+                }
+        </script>
+    </head> 
+    <body>
+       <fieldset>
+        <legend> Javascript and HTML input and output </legend>
+        <p>
+             Number 1: <input type="number" id="n1"/>
+             Number 2: <input type="number" id="n2"/>
+        </p> 
+
+        <p>
+            <button onclick="one()"> n1 + n2 </button>
+            <button onclick="two()"> N1 - N2 </button>
+            <button onclick="three()"> N1 % N2 </button>
+            <button onclick="four()"> N1 / N2 </button>
+            <button onclick="five()"> N1 * N2 </button>
+       </p>
+       <h1 id="result">0</h1>
+       </fieldset>
+    </body>
+</html>

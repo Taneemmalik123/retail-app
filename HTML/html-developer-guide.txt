@@ -1,0 +1,221 @@
+HTML- Hypertext markup language
+  ->   it has collection of pre defined tags
+  -> it use to create basic structure of webpage
+  -> The html tags, use to collect information from user
+  -> The tags, use to display information to user via web browser
+  -> The html tags have limited property and values.
+
+  Responsive webpage = HTML(tags) + css(property +values)
+
+ =>Tags ?
+   <> - Open tag
+   </> - close tag
+
+=> type of tag?
+    1.Input tag -it is use to collect the information from the user
+    2.Output tag- it is use to display output to the user.
+
+=> Types of tag?
+    3.Dependent tag - those html tags have open and close seperat
+      ->Example
+           <html></html>
+           <body></body>
+           <abc></abc>
+
+
+4. independent tag  / self closing tag
+   --> Example
+           <br> -plateform dependent
+           <br/> -plateform independent
+           <img/>
+           <abc/>
+           <hello/>
+    Note- Those html tags have open and close together
+    
+=> The behavior of html tags ?
+5. Block level tags - Those html tags,that prin statement in new line by default
+6. Inline tag -Those html tags that print the statement in  same line
+
+Note - For Responsive webpage design
+    =>Block level tag =>convert=>in inline tag
+    =>inline tag      =>convert=>in block level
+    Using css
+-------------------------------------------------------------------------------------
+=>The valid file extension of html document?
+   .html
+   .htm
+---------------------------------------------------------------------------------
+
+=>The structure of html document?
+  html start to end called document ?
+    -->head
+      =>marketing & Analytics
+      =>library section (css,js,other)
+    -->body
+      =>contents with suitable tags.
+-----------------------------------------------------------
+h1-h6 => It is use to create headline on webpage.
+          h1 is require min and max 1 time in each page.
+          h2-h6 no such rules.
+        >   title of the page and h1 of the pAGE SHOULD BE SAME AND ALSO in website only 70 chars are 
+           displayed more than that is dot dot dot
+        >when the person serach something on web page then he should click 6 times or should be on the page for 2 mints else it is bounce rate
+         
+         
+          p- use p tag if text is more than 130 chars
+          browser have memory of 2MB to 10 Mb only
+          Text formating tag
+          ->b
+          ->i
+          ->u
+          ->font  - fr color, size , family
+          ->strong
+          ->del - it show old value
+          ->ins - it show updated value
+          --------------------------------
+          Type of list in html
+          ->OL-Order list-OL.html 
+               type="1"
+               type="A"
+               type="a"
+               type="I"
+               type="i"
+        -------------------------------------
+          ->UL-> unorder list
+             type="disc"
+             type="square"
+             type="circle"
+             type="none"
+             -------------------------------------
+          ->DL- Definition list-dl.html
+          dt-->definition title-it creates headline of content
+          dd-->definition detail-it is use to display detail of contain
+---------------------------------------------------------------------------------
+           How to link the html pages
+           --> <a href="login.html" title=""target="" id="" class=""> Text to click </a>
+            =>href - it use to set path / url for next file
+            =>title - it is for search engine indexing..
+            =>target - it is use to set location for next file, that where it should open
+            =>id - it connect with css, js
+            =>class - it connectwith css , js
+
+            link1.html
+            link2.html
+            
+        
+        -->Type of target
+            1. target="_self"  - The next page will open in same tab
+                               - it is default target
+
+            2. target="_new" - The next page will open in new tab but only at 1st click
+            3. target="_blank" - The next page will open in new tab but every click
+
+            4. target="_child" -The next page will open in popup window
+            5. target="_parent" -The user intraction in child window will reflect in parent window
+            6. target="userdefined" - A developer can create according to need in project
+
+        ---------------------------------------------------------------------------------------------
+               product.html
+               details.HTML
+        ---------------------------------------------------------------------------------------------
+
+        =>table in html
+          1.method
+            -> structure of table
+            =>table
+                ->captiom
+                =>tr (table row)
+                  ->th(table heading) - bold, center align
+                  ->td(table data)    - normal text, left align
+
+
+           2. method
+               ->structure of table
+               =>table
+                 =>thead - it cover on top of table
+                   =>tr
+                      ->th
+                 =>tbody -it cover middle section of table
+                   =>tr
+                      ->td
+                 =>tfoot - it cover bottom section of table
+                   =>tr
+                      ->th
+        --------------------------------------------------------------
+        list of property in table,tr,th,td,thead,tbody,tfoot
+            ->align - left, center ,right(defaukt is-left)
+            ->valign - top,middle,bottom(default is -middle)
+            ->border -
+            -->cellpadding -it apply space inside th, td
+            -->cellspacing-it apply space outside of th,td
+            -->bordercolor -it set color for border
+            =>table.html 
+              -> colspan -it is used to combine space of 2 or more th & td (combine LTR)
+              ->rowspan- it use to combine space of 2 or moretr (vertical top to bottom)
+              -width- px / %
+              ->height - px /%
+              ->bgcolor-for background color th, td, tr
+                =>table2.html
+               -------------------------------------------------------------------
+List of input tags
+      ->text-to collect text & number input from user in 1 line
+      ->number- to collect number input from user in 1 line
+      ->password- to collect the text & number (secure) input from user in 1 line 
+      ->email- only TO COLLECT email id from user 
+      ->textarea-to collect multiline input from user(eg address)
+      ->select-to ask input from given option
+      ->date-> to select day/month/year along with am or plateform
+      ->datetime ->local- to select day/month/year along with am or pm
+      -> file -to upload any file( eg ile attached in mail,photo upload in fb or resume attached in naukri )
+      ->checkbox - to choose one or more from the given option
+      ->Radio - to choose only one option
+      ->button
+           =>submit - it submit form data to server
+           =>Reset - it clears the data of current form
+           =>button - it can do anything but work based on java skript
+      -----------------------------------------------------------------------
+      List of property for input elements
+       -> placeholder - it is for input guidence text, password, number, email, textatra(search field)
+       -> maxlength - it set limit of input in char -text,email, password,textarea
+       ->size - it control the width of text, password ,email only this is 
+       ->value - it is use to display default value for input elements
+       ->readonly - it is only to read but able to communicate with backend
+       ->disabled - readonly and fully locked unable to communicate with backend
+       ->rows - it increase hight of text area
+       ->cols - it increase text of width of textarea
+       ->tabindex - it use to set sequence of curser(when we press tab from keyboard the software should work with tab key)
+       ->form
+           =>action- it is used to set backend URL / path where need to submit the form data
+           =>method - it set type of communication between client to server
+               =>Get -it pass data via browser url, and fully visible(it is unsecure method)
+               =>post - it pass data in hidden mode + encoded format (fully secure)
+               =>PUT / PATCH-
+               =>DELETE
+           => enctype =>it encode the attached file before moving to internet
+                Note- encoded file will be virus free + file size reduce + secure to upload via net 
+             ->name - it use to create variable in html in hold input given by user      
+        -----------------------------------------------------------------------------------------------------------------------------------
+        Type &nbsp; to add a single space.
+              Type &ensp; to add 2 spaces.
+              Type &emsp; to add 4 spaces.
+    -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      .
+
+
+                         
+

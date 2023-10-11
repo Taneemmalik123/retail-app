@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+           const three =()=>{
+            document.write("<h1> Welcome to javascript </h1>");
+           }
+
+           let message = "<h1> Hi how are you today...</h1> <p> where are you </p>";
+
+           const one= ()=>{
+            document.getElementById("xyz").innerText=message;        
+          }
+          const two = ()=>{
+            document.getElementById("xyz").innerHTML=message;        
+          }
+          //innerText - it is used to send only text data to HTML
+          //innerHTML - it is use to send html tags to HTML
+        </script>
+    </head>
+    <body>
+        <h1> Difference between .innerText & .innerHTML </h1>
+        <button onclick="one()"> Click Me for innerText</button>
+        <button onclick="two()"> Click Me for innerHTML</button>
+        <button onclick="three()"> What is Document ?</button>
+
+     
+        <br/><br/>
+
+        <div id="xyz"> No Data </div>
+    </body>
+</html>

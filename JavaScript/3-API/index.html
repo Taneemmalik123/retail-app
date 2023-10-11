@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="dist/css/bootstrap.css" />
+    <style>
+        #apidata {
+            min-height: 500px;
+        }
+    </style>
+</head>
+<body onload="gethome()">
+    <div class="container-fluid mt-3 mb-5">
+        <div class="row">
+            <div class="col-lg-3 text-center text-danger">
+                <h1> JavaScript API Call </h1>
+            </div>
+            <div class="col-lg-9 text-end pt-2">
+                <div class="btn-group">
+                    <button class="btn btn-danger" onclick="gethome()">Home</button>
+                    <button class="btn btn-info" onclick="getabout()">About Us</button>
+                    <button class="btn btn-primary" onclick="getcontact()">Contact Us</button>
+                    <button class="btn btn-warning" onclick="allcontact()"> Contact List </button>
+                    <button class="btn btn-secondary" onclick="bloglist()"> Blogs </button>
+                    <button class="btn btn-dark" onclick="commentlist()"> Comments </button>
+                    <button class="btn btn-info" onclick="todolist()"> Todo list </button>
+                    <button class="btn btn-dark" onclick="albumlist()"> Album list </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="apidata" class="container"></div>
+
+    <footer class="bg-info p-5 text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>
+                        Javascript API fetch().then().then(), .text(), .json(), map()
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+const todolist = () => {
+            let url = "https://jsonplaceholder.typicode.com/todos";
+            let data = "<div class='row'>";
+            fetch(url)
+                .then(response => response.json())
+                .then(blogArray => {
+                    blogArray.map((blog, index) => {
+                        data = data + "<div class='col-lg-6 mb-4'>";
+                        data = data + "<h3 class='text-primary'>" + blog.title + "</h3>";
+                        data = data + "<h3 class='text-primary'>" + blog.completed + "</h3>";
+                        data = data + "</div>";
+                    })
+                    data = data + "</div>";
+                    document.getElementById("apidata").innerHTML = data;
+            })
+        }
+
+const albumlist = () => {
+            let url = "https://jsonplaceholder.typicode.com/albums";
+            let data = "<div class='row'>";
+            fetch(url)
+                .then(response => response.json())
+                .then(blogArray => {
+                    blogArray.map((blog, index) => {
+                        data = data + "<div class='col-lg-6 mb-4'>";
+                        data = data + "<h3 class='text-primary'>" + blog.title + "</h3>";
+                        data = data + "</div>";
+                    })
+                    data = data + "</div>";
+                    document.getElementById("apidata").innerHTML = data;
+                })
+        }
+
+        const commentlist = () =>{
+            let url = "https://jsonplaceholder.typicode.com/comments";
+            let data = "<div class='row'>";
+            fetch(url)
+            .then(response=>response.json())
+            .then(blogArray=>{
+               blogArray.map((blog, index)=>{
+                    data = data + "<div class='col-lg-6 mb-4'>";
+                    data = data + "<h3 class='text-primary'>" + blog.name + "</h3>";
+                    data = data + "<p class='text-danger'>" + blog.email + "</p>";
+                    data = data + "<p class='text-info'>" + blog.body + "</p>";
+                    data = data + "</div>";
+               })
+                data = data + "</div>";
+                document.getElementById("apidata").innerHTML = data;
+            })
+        }
+
+        const bloglist = () =>{
+            let url = "https://jsonplaceholder.typicode.com/posts";
+            let data = "<div class='row'>";
+            fetch(url)
+            .then(response=>response.json())
+            .then(blogArray=>{
+               blogArray.map((blog, index)=>{
+                    data = data + "<div class='col-lg-6 mb-4'>";
+                    data = data + "<h3>" + blog.title + "</h3>";
+                    data = data + "<p>" + blog.body + "</p>";
+                    data = data + "</div>";
+               })
+                data = data + "</div>";
+                document.getElementById("apidata").innerHTML = data;
+            })
+        }
+
+        const delmsg = ( id )=>{
+            let url = "http://localhost:1234/contactlist/"+id;
+            let postdata = { method:"DELETE" };
+            fetch(url, postdata)
+            .then(response=>response.json())
+            .then(emptyRes=>{
+                alert(id + " - No Message Deleted !");
+                allcontact(); // reload the list after delete
+            })
+        }
+
+        const save = () => {
+            let fullname = document.getElementById("myname").value.trim();
+            let emailid = document.getElementById("myemail").value.trim();
+            let mobileno = document.getElementById("mymobile").value.trim();
+            let message = document.getElementById("mymessage").value.trim();
+            let newmsg = {
+                "fullname": fullname,
+                "mobile": mobileno,
+                "email": emailid,
+                "message": message
+            };
+            let url = "http://localhost:1234/contactlist";
+            let postdata = {
+                headers:{'Content-Type':'application/json'},
+                method:"POST",
+                body:JSON.stringify(newmsg)  // array to json conversion
+            }
+            fetch(url, postdata)
+            .then(response=>response.json())
+            .then(serverRes=>{
+                alert("Thanks, Your Message Receved with Ref. No:" +serverRes.id);
+                allcontact(); // to reload the list
+            })
+        }
+
+        const allcontact = () => {
+            let data = "<div class='row'>";
+            fetch("http://localhost:1234/contactlist")
+                .then(alldata => alldata.json())
+                .then(contactArray => {
+                    contactArray.map((contact, index) => {
+                        data = data + "<div class='col-lg-3 mb-4'>";
+                        data = data + "<div class='p-3 shadow-lg rounded'>";  // open
+                        data = data + "<h3>" + contact.fullname + "</h3>";
+                        data = data + "<p>" + contact.mobile + "</p>";
+                        data = data + "<p>" + contact.email + "</p>";
+                        data = data + "<p>" + contact.message + "</p>";
+                        data = data + "<p class='text-center'> <button class='btn btn-danger btn-sm' onclick='delmsg("+ contact.id +")'>Delete</button> </p>";
+                        data = data + "</div>"; // close
+                        data = data + "</div>";
+                    })
+                    data = data + "</div>"; // end of row
+                    document.getElementById("apidata").innerHTML = data;
+                })
+        }
+
+
+        const gethome = () => {
+            fetch("home.html")
+                .then(homeData => homeData.text())
+                .then(originalData => {
+                    document.getElementById("apidata").innerHTML = originalData;
+                })
+        }
+
+        const getabout = () => {
+            fetch("about.html")
+                .then(homeData => homeData.text())
+                .then(originalData => {
+                    document.getElementById("apidata").innerHTML = originalData;
+                })
+        }
+
+        const getcontact = () => {
+            fetch("contact.html")
+                .then(homeData => homeData.text())
+                .then(originalData => {
+                    document.getElementById("apidata").innerHTML = originalData;
+                })
+        }
+    </script>
+</body>
+
+</html>

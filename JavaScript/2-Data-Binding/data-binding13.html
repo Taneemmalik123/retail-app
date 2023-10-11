@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <style>
+        .xyz{
+        display:inline-block;
+        margin:40px;
+        border: 10px solid red;
+        padding: 20px;
+        font-size: 22px;
+        color: blue;
+        }
+
+      </style>
+        <script>
+          let userinfo={
+            fullname:"Alex",
+            mobileno:758903030,
+            city:"Bangalore",
+            age:"30 Years",
+            edu:"MCA"
+          };
+
+
+
+          const showoldinfo=(oldvalue)=>{
+            let data="<p>Fullname:" + oldvalue.fullname + "</p>";
+            data  = data + "<p>Mobileno:" + oldvalue.mobileno + "</p>";
+            data  = data + "<p>Age:" + oldvalue.age + "</p>";
+            data  = data + "<p>Education:" + oldvalue.edu + "</p>";
+            data  = data + "<p>City:" + oldvalue.city + "</p>";
+            document.getElementById("olddetails").innerHTML=data;
+           
+          }
+
+
+          const showInfo=()=>{
+            let data="<p>Fullname:" + userinfo.fullname + "</p>";
+            data  = data + "<p>Mobileno:" + userinfo.mobileno + "</p>";
+            data  = data + "<p>Age:" + userinfo.age + "</p>";
+            data  = data + "<p>Education:" + userinfo.edu + "</p>";
+            data  = data + "<p>City:" + userinfo.city + "</p>";
+            document.getElementById("details").innerHTML=data;
+           }
+
+
+           const save=()=>{
+            showoldinfo(userinfo); //to display previous value
+            userinfo.fullname=document.getElementById("fname").value;
+            userinfo.mobileno=document.getElementById("mobile").value;
+            userinfo.age=document.getElementById("age").value;
+            userinfo.edu=document.getElementById("edu").value;
+            userinfo.city=document.getElementById("city").value;
+            showInfo(); // to refresh the data in the browser
+           }
+        </script>
+    </head>
+    <body>
+      <h1> Object in Javascript </h1>
+      <div>
+        <input type="text" id="fname" placeholder="Your Name"/>
+        <input type="number" id="mobile" placeholder="Your MOBILE no"/>
+        <input type="text" id="age" placeholder="Your Age"/>
+        <input type="text" id="edu" placeholder="Your Education"/>
+        <input type="text" id="city" placeholder="Your City"/>
+
+
+        <button onclick="save()" > Update Details</button>
+        <button onclick="showInfo()" > Print Details</button>
+  </div>
+      <div id="details" class="xyz"></div>
+
+
+      <div id="olddetails" class="xyz"></div>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+{
+  "account": [],
+  "product": [
+    {
+      "name": "Apple",
+      "price": "1222",
+      "photo": "1.jpg",
+      "details": "Apple is too  tasty",
+      "seller": "1",
+      "id": 1
+    },
+    {
+      "name": "Orange",
+      "price": "13333",
+      "photo": "2.jpg",
+      "details": "orange are fresh and from form",
+      "seller": "1",
+      "id": 2
+    },
+    {
+      "name": "Radish",
+      "price": "100",
+      "photo": "1.jpg",
+      "details": "jdekjefjefjeofjeofjeofjo",
+      "seller": "1",
+      "id": 3
+    },
+    {
+      "name": "Mango",
+      "price": "500",
+      "photo": "3.jpg",
+      "details": "This is very good fruit from india",
+      "seller": "1",
+      "id": 4
+    },
+    {
+      "name": "printer",
+      "price": "12000",
+      "photo": "4.jpg",
+      "details": "this is good item from italy",
+      "seller": "1",
+      "id": 5
+    },
+    {
+      "name": "scanner ",
+      "price": "14000",
+      "photo": "5.jpg",
+      "details": "this product is in less price",
+      "seller": "1",
+      "id": 6
+    },
+    {
+      "name": "water",
+      "price": "20",
+      "photo": "4.jpg",
+      "details": "this is good for health",
+      "seller": "1",
+      "id": 7
+    },
+    {
+      "name": "Keyboard",
+      "price": "2000",
+      "photo": "5.jpg",
+      "details": "This is very good product from india",
+      "seller": "1",
+      "id": 8
+    }
+  ],
+  "cart": [],
+  "order": []
+}

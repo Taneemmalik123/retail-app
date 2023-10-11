@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            p{
+                display:inline-block;
+                margin: 2%;
+                width: 20%;
+                font-size: 80px;
+                color:red;
+            }
+        </style>
+        <script>
+            let one=()=>{
+               let data="";
+               for(i=1;i<=20;i++){
+                //console.log("The For say:",i);
+                data=data + "<p>" +i + "</p>";
+              }
+              document.getElementById("container").innerHTML=data;
+            }
+            let two=()=>{
+               let data="";
+               for(i=20;i<=40;i++){
+                //console.log("The For say:",i);
+                data=data + "<p>" +i + "</p>";
+              }
+              document.getElementById("container").innerHTML=data;
+            }
+            let three=()=>{
+               let data="";
+               for(i=1;i<=40;i=i+2){
+                //console.log("The For say:",i);
+                data=data + "<p>" +i + "</p>";
+              }
+              document.getElementById("container").innerHTML=data;
+            }
+            let four=()=>{
+               let data="";
+               for(i=0;i<=40;i=i+2){
+                //console.log("The For say:",i);
+                data=data + "<p>" +i + "</p>";
+              }
+              document.getElementById("container").innerHTML=data;
+            }
+
+
+            </script>
+    </head>
+    <body>
+        <h1> Javascript for loop & Data Binding </h1>
+       <button onclick="one()"> Print 1 to 20 </button>
+       <button onclick="two()"> Print 20 to 40 </button>
+       <button onclick="three()"> Print  1 to 40 odd number</button>
+       <button onclick="four()"> Print  1 to 40 even number</button>
+       <button> Print Desire Number </button>
+
+       <br/>
+       <section id="container"></section>
+       
+    </body>
+</html>

@@ -1,0 +1,180 @@
+Css-cascading style sheet.
+    HTML Has collections of pre-defined tags with a limited property value.
+    CSS has collection of only property and values
+
+
+    Responsive webpage=HTML(tags)+CSS(property and values)
+    Type of CSS?
+    ->Inline css-0%-1 to 1
+    ->internal css-10%- 1 to many, unsecure
+    ->external css-85% -1 to many, unsecure but very fast
+    ->import css-5% -1 to many, fully secure but super slow
+
+  1. Inline CSS
+      Sytax
+        <tagname style="property:value;property2:value2;">content to print </tagname> 
+
+        Example
+        <p Style="color:red;height:200px;width:300px;"> Welcome To Bangalore </p>
+
+        Under inline css folder
+          -->page1.html
+
+          ======List of property and values in CSS=======
+          height= 3 methods
+                height:200px;-it is fixed for all type of window
+                min-height:200px;-it is fixed for min height but if content is more it will extent automaticlly
+                height:auto;it is fully based on contents.
+         ------------------------------------------------------------------------------------------------------------
+         background-9 methods
+              background:red;
+              background-color:red;
+              background-color:rgb(100,120,50,0.5) range of brightness - 0.1 to 1
+              background-image:url('1-jpg');
+              background-image:linear-gradient(skyblue , grey , blue , black);
+              background-image:linear-gradient(to left ,skyblue , grey , blue , black);
+              background-image:linear-gradient(to right, skyblue , grey , blue , black);
+              background-image:linear-gradient(to top,skyblue , grey , blue , black);
+                  
+                  div p{
+                    font-size:40px;
+                    color:blue;
+                  }
+
+
+      ------------Continue of css property & value---------------------
+
+      display-
+          display:name  -it hide element
+          display:block -it convert from inline to block
+          display:inline - it convert from block level tag to inline tag where width
+                           will not work
+          display:inline-block - it convert from block level tag to inline
+                 where width will work
+          display:grid;
+          display:flex;
+
+      ---------------------------------------------------------------
+        sample content
+            <section>
+        <p> Software Development </p>
+        <p> Online Marketing </p>
+        <p> Offline Marketing </p>
+        <p> Leads Management </p>
+        <p> Home Service </p>
+        <p> Painting Service </p>
+        <p> Education </p>
+        <p> Employment </p>
+        <p> App Development </p>
+        <p> Website Design </p>
+        <p> Business Branding </p>
+        <p> Digital Marketing </p>
+        <p> Hire & Deploy </p>
+        </section>
+
+      =>border
+         type of border
+       -> solid
+       -> dotted
+       ->dashed
+       ->double
+       ->inset
+       ->outset
+       ->ridge
+       ->groove
+
+       =>border direction
+         border: all side
+         border-top:
+         border-bottom:
+         border-left:
+         border-right:
+         border-none  - no border
+      =>Examplebordrer:10px double red;     10px border in red color with double linear
+       ------------------------------------------------  
+         border -radius
+           #b9{border:10px solid red;border-radius:30px;}
+           #b10{border:10px solid red;border-radius:0px 50px 10px 30px;}
+           #b11{border:10px solid red;border-radius:160px;height:300px;width:300px;}
+          ---------------------------------------------------
+          box-shadow:from-left from-top density color
+        Example
+          box-shadow:opx 0px 10px red;
+      
+      ---------------------------------------------------------------------------------------------
+           text-shadow:from-left from-top density color
+        Example
+           text-shadow:0px 0px 10px red;
+
+
+
+         ---------------------------------------------------
+          width - 4 methods
+             width:px; - it is fixed for all size of window
+             width:%; - it will fit in all size of window
+             min-width: px / %
+             
+          color - 
+          float - it convert from block level element
+                  =>float:left - it print the element from left to right(LTR)
+                  =>float:right- it print the element from right to left(RTL)
+          margin- ot apply a space outside of element
+                =>margin:auto; it align the element in center of present area but left to right
+                =>margin:30px; it apply 30px gap from all side(top left right and bottom)
+                =>margin-left:
+                =>margin-right:
+                =>margin-top:
+                =>margin-bottom: 
+                =>margin:top left+right bottom
+                    margin:20px 40px 20px
+                =>margin-left:-20px
+                =>margin-right:-30px
+                =>margin-top:-40px
+                =>margin-bottom:-30px
+
+          Padding - it apply 30px gap from all side
+          =>padding-top:
+          =>padding-left:
+          =>padding-right:
+          =>padding-bottom:
+          =>padding:top left-right bottom:
+ Note- margin apply a space outside of element and padding apply a space inside of element
+--------------------------------------------------------------------------------------------------------
+In inline CSS
+ =>it is 1 to 1 (write css code 1 time and use 1 time)
+ => Because of 1 to 1, code duplicate will happen
+ =>if code is duplicate then file size will increase 
+ =>Heavy file will take long time to load.
+ =>It take more disc space
+ =>if page loading is slow then user experience may be based
+ =>code modification may be complex because of duplicate code
+ =>Search engine will reject from google Search
+ ------------------------------------------------------------------------------
+ In internal CSS
+ =>1 to many(write code one time and use in html many time)
+   Syntax in-internal,external, import
+      selector{
+        property:value;
+        property2:value;
+        property3:value;
+      }
+     Example
+      h1{
+        text-align:center;
+        font-size:50px;
+        color: red;
+      }
+       =>The CSS has given following method
+       1.CSS for tag name. - Example2.html
+       2.CSS for tag group - Example3.html
+       3.CSS for id        - Example4.html
+       4.CSS for class     - Example5.html
+       5.CSS for child tag,any selector(id,class groupof tag,1 tag)
+          table
+             thead
+                tr
+                  th
+             tfoot
+                tr
+                  th     
+    NOte:div used to divide the page into multiple block with use of Css

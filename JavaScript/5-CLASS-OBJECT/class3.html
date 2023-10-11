@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <style>
+        #parent , #child{
+            width: 400px;
+            margin: 50px;
+            display: inline-block;
+            vertical-align: top;
+          }
+
+          p{
+            font-size: 25px;
+            color: blue;
+          }
+
+          h1{
+            font-size: 50px;
+            color: red;
+          }
+    </style>
+    <script>
+         class Inventory{
+            constructor(){
+              this.product=["pen","Market","Book", "Laptop","Mouse","Keyboard","Printer" ];
+            }
+         }
+
+         class Shop extends Inventory{
+            constructor(){
+            super();
+            this.customer=["Alex" , "Bunty" , "Dolly", "Eli" , "Farhad" , "goldi" , "Irfan"];
+      }
+
+      getparent=()=>{
+        let temp="<h1>Parent Class Data </h1>";
+        this.product.map((pname,index )=>{
+            temp= temp + "<p>" + pname + "</p>";
+        })
+        document.getElementById("parent").innerHTML=temp;
+      }
+
+      getchild=()=>{
+        let temp="<h1>Child Class Data </h1>";
+        this.customer.map((cname,index )=>{
+            temp= temp + "<p>" + cname + "</p>";
+        })
+        document.getElementById("child").innerHTML=temp;
+      }
+       
+      getboth=()=>{
+        this.getparent();
+        this.getchild();
+      }
+  
+    }
+    const obj3=new Shop();
+    </script>
+ </head>
+ <body>
+    <center>
+    <button onclick="obj3.getparent()"> Parent Class Data </button>
+    <button onclick="obj3.getchild()"> Child Class Data </button>
+    <button onclick="obj3.getboth()"> Parent & Child Both Class Data </button>
+</center>
+
+<section id="parent"></section>
+<section id="child"></section>
+
+
+ </body>    
+</html>

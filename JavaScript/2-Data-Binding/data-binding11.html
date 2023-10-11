@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <style>
+        #container{ 
+            display: grid;
+            grid-template-columns:auto auto auto auto;
+     }
+     #container div{
+        font-size:50px;
+        color:blue;
+        padding:15px 0px 15px;
+     }
+    </style>
+    <script>
+        let itemlist=["Water", "Apple" , "Milk","CHICKEN","Biryani"]; // global variable
+     const getitem=()=>{
+        let temp="";
+        itemlist.map((itemname,index)=>{
+            temp=temp + "<div>" + itemname + "</div>";
+        })
+        document.getElementById("container").innerHTML=temp;
+        
+     }
+     const save=()=>{
+     let itemname=document.getElementById("newitem").value;
+     itemlist.push(itemname); // adding new element at the end of array
+alert(itemname+ "Added in list");
+document.getElementById("newitem").value=""; //how to clear input feild
+getitem();//calling back to reload the listafter adding new item
+} 
+    </script>
+ </head>
+ <body onload="getitem()">
+    <h1> Array, add, list, delete, USING javascript </h1>
+    <p>
+        Enter the item name:<input type="text" id="newitem"/>
+        <button onclick="save()"> Save item</button>
+        <button onclick="getitem()"> Item List</button>
+ </p>
+
+ <section id="container">No Item</section>
+ </body>
+</html>

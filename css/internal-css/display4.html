@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+             #service{
+            width:90%;
+            margin:auto;
+            display:grid;
+            grid-template-columns:auto auto auto auto;
+        }
+        #service div{
+            font-size:30px;
+            color:blue;
+            margin:30px 20px 30px;
+        }
+        /*media query start here*/
+        @media screen and (min-width:1px) and (max-width:700px){
+           #service{
+            grid-template-columns: auto !important;
+           } 
+        }
+
+        @media screen and (min-width:701px) and (max-width:900px){
+           #service{
+            grid-template-columns: auto  auto !important;
+           } 
+        }
+
+        @media screen and (min-width:901px) and (max-width:1200px){
+           #service{
+            grid-template-columns: auto auto auto !important;
+           } 
+        }
+        </style>
+        
+    </head>
+    <body>
+        <section id="service">
+            <p> Software Development </p>
+            <p> Online Marketing </p>
+            <p> Offline Marketing </p>
+            <p> Leads Management </p>
+            <p> Home Service </p>
+            <p> Painting Service </p>
+            <p> Education </p>
+            <p> Employment </p>
+            <p> App Development </p>
+            <p> Website Design </p>
+            <p> Business Branding </p>
+            <p> Digital Marketing </p>
+            <p> Hire & Deploy </p>
+            </section>
+    </body>
+</html>

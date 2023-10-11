@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+         let booklist = [
+            {name:"HTML Basic",price:800,qty:100},
+            {name:"CSS Basic",price:900,qty:80},
+            {name:"Javascript Basic",price:1200,qty:50},
+         ];
+
+         const getbook=()=>{
+            let alltr = "";
+            booklist.map((book,index)=>{
+               alltr = alltr +"<tr>";
+                alltr = alltr + "<td>" + index + "</td>\n";
+                alltr = alltr + "<td>" + book.name + "</td>\n";
+                alltr = alltr + "<td>" + book.price + "</td>\n";
+                alltr = alltr + "<td>" + book.qty + "</td>\n";
+                alltr = alltr + "<td> <button onclick='delbook("+index+")'> Remove </button> </td>\n";
+               alltr = alltr + "</tr>\n\n";
+            })
+            console.log( alltr );
+            
+            document.getElementById("container").innerHTML=alltr;
+         }
+
+         const save=()=>{
+            let bookname=document.getElementById("bname").value;
+            let bookprice=document.getElementById("bprice").value;
+            let bookqty=document.getElementById("bqty").value;
+
+            let newbook={name:bookname,price:1200,qty:50};
+            booklist=booklist.concat(newbook);//combine 1 object with another array
+            getbook(); //to reload the list with newly added element
+
+            //how to clear input element
+            document.getElementById("bname").value="";
+            document.getElementById("bprice").value="";
+            document.getElementById("bqty").value="";
+        }
+
+                const delbook=(index)=>{
+                    booklist.splice(index,1);
+                    //what is index -> position of element
+                    //what is 1=>   The no of element to delete from given position
+                    getbook(); //reload the list after delete
+                }
+        </script>
+    </head>
+    <body onload="getbook()">
+        <table align="left" cellpadding="12">
+           <tr>
+            <th> Book Name </th>
+            <td> <input type="text" id="bname"/> </td>
+           </tr>
+           <tr>
+            <th> Book Price </th>
+            <td> <input type="text" id="bprice"/> </td>
+           </tr>
+           <th> Book Quantity </th>
+            <td> <input type="text" id="bqty"/> </td>
+           </tr>
+           <tr>
+            <th colspan="2">
+                <button onclick="save()"> Save Book </button>
+            </th>
+           </tr>
+        </table>
+
+        <table align="right" cellpadding="12" border="1" bordercolor="red" cellspacing="0" width="60%">
+            <thead>
+                <tr align="left">
+                <th> Book Index </th>
+                <th> Book Name </th>
+                <th> Book Price </th>
+                <th> Book Quantity </th>
+                <th> Action </th>
+            </tr>
+            </thead>
+            <tbody id="container"></tbody>
+        </table>
+    </body>
+</html>

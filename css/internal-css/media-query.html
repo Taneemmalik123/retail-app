@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{ background-color:skyblue; }
+            h1{ 
+                color:white; 
+                font-size:100px;  
+                text-align:center;
+            }
+
+            @media screen and (min-width:1px) and (max-width:600px){
+                body{ background-color:green !important; }
+                h1{ font-size:35px !important; }
+            }
+
+
+            @media screen and (min-width:601px) and (max-width:900px){
+                body{ background-color:orangered !important; }
+                h1{ font-size:65px !important; }
+            }
+
+            @media screen and (min-width:901px) and (max-width:1200px){
+                body{ background-color:blue !important; }
+                h1{ font-size:80px !important; }
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1> CSS Media Query </h1>
+    </body>
+</html>

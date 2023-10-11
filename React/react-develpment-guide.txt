@@ -1,0 +1,90 @@
+-----------------------------------------------------------------
+	=> How to setup project 
+		1. install nodejs from nodejs.org 
+		
+		2. setup react environment 
+			=>npm install -g create-react-app
+			
+		3. create new project using 
+			=>npx create-react-app project1
+		Note - on success of step no 3. "Happy hacking" message will come 
+		
+		4. open cmd in project1 folder and start react development server 
+			=>npm start 
+		
+		5. browse the project in browser on the url  
+			=> http://localhost:3000
+--------------------------------------------------------------------
+	component => a function in javascript is called component in react 
+	component => a class in javascript is called component in react
+	Note - we will learn react using function component
+--------------------------------------------------------------------
+	=>All the html tags + user defined tags are called "JSX Element" in react
+--------------------------------------------------------------------
+	
+	XML Rules 
+		1. every xml document should have doc type declaration 
+		2. xml tags are user defined
+		3. xml tags are case sensitive 
+		4. every xml doc should have only 1 parent element 
+		
+		
+		
+		Example 
+			<?xml version="1.0" ?>
+				<userlist>
+					<user>
+						<mobile> 8792462607 </mobile>
+						<city> Bangalore </city>
+					</user>
+					<user>
+						<mobile> 7878787878 </mobile>
+						<city> Chennai </city>
+					</user>
+				</userlist>
+-----------------------------------------------------------------------	   
+	JSX Rules 
+		1. inside a component if more than 1 jsx elements are required then 
+		   keep inside parent jsx element 
+		   Example 
+		   
+			 <section>
+				 <h1> About Us </h1>
+				 <p> dfg dfg dfg dfg dfg dfg dfg dfg dfg dfg </p>
+				 <div> dfg dfg dfg dfg dfg dfg dfg dfg df   </div>
+				 <p> dfg dfg dfg dfg dfg dfg dfg dfg dfg dfg </p>
+			 </section>
+
+		2. if inside a component more than 1 jsx elements are required	then 
+		   the parent jsx element can be user defined also.
+		   Example
+		   	  <xyz>
+				 <h1> About Us </h1>
+				 <p> dfg dfg dfg dfg dfg dfg dfg dfg dfg dfg </p>
+				 <div> dfg dfg dfg dfg dfg dfg dfg dfg df   </div>
+				 <hi>Need Help ?</hi>
+				 <p> dfg dfg dfg dfg dfg dfg dfg dfg dfg dfg </p>
+			 </xyz>
+
+		3. if inside a component more than 1 jsx elements are required	then 
+		   the parent jsx element can be <></> empty tag also.
+			 Example
+			 <>
+				 <h1> About Us </h1>
+				 <p> dfg dfg dfg dfg dfg dfg dfg dfg dfg dfg </p>
+				 <div> dfg dfg dfg dfg dfg dfg dfg dfg df   </div>
+				 <hi>Need Help ?</hi>
+				 <p> dfg dfg dfg dfg dfg dfg dfg dfg dfg dfg </p>
+			 </>
+        
+		4. if inside a component more than 1 jsx elements are required	then 
+		   the parent jsx element can be array [] also.
+			Example 
+			  [
+				 <h1> About Us </h1>,
+				 <p> dfg dfg dfg dfg dfg dfg dfg dfg dfg dfg </p>,
+				 <div> dfg dfg dfg dfg dfg dfg dfg dfg df   </div>,
+				 <hi>Need Help ?</hi>,
+				 <p> dfg dfg dfg dfg dfg dfg dfg dfg dfg dfg </p>
+			  ]
+-------------------------------------------------------------------------	

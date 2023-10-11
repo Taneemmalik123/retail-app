@@ -1,0 +1,46 @@
+.<html>
+    <head>
+        <script>
+           const one = () =>{
+            alert("Request Processed Successfully...")
+           }
+
+           const two=()=>{
+            let a=confirm("Are you sure..?"); //ok-->true,cancel-->false
+            alert(a);
+           }
+
+           const three=()=>{
+            let a = prompt("Enter Your Email Id to send Download Link");
+            alert("The Download link sent to : " + a);
+           }
+        </script>
+    </head>
+    <body>
+        <h1>Type of popup window in javascript </h1> 
+        <p>
+            Alert() -it use to give confirmation to user.<br/>
+            <button onclick="one()">Click Me </button>
+        </p>
+        <p>
+            confirm() -used to ask confirmation from user
+
+            <button onclick="two()"> Delete User1 </button>
+            <button onclick="two()"> Delete User2 </button>
+            <button onclick="two()"> Delete User3 </button>
+            <br/>
+           <ul>
+                <li> ok return "true" </li>
+                 <li> Cancel return "false"</li>
+            </ul>
+        </p>
+
+        <p>
+            prompt() - It is use to collect input from user  <br/><br/>
+            <button onclick="three()"> Download File </button>
+            <button onclick="three()"> Download Photo </button>
+            <button onclick="three()"> Download Code</button>
+
+        </p>
+    </body>
+</html>

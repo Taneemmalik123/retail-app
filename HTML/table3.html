@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> what is colspan in table ?</title>
+        </head>
+        <body>
+            
+            <table align="center" cellpadding="13" border="1" cellspacing="0">
+               <Caption> 
+                <h1> COLSPAN + ROWSPAN -Example </h1>
+               </Caption>  
+            <tr>
+                <th> Sl No </th>
+                <th> Full Name </th>
+                <th> Mobile No </th>
+                <th> Education </th>
+                <th> City     </th>
+                <th> Passing Year</th>
+                <th> Entry Date </th>
+            </tr>
+            <tr>
+                <td> 01 </td>
+                <td> Amit </td>
+                <td> 7624726427 </td>
+                <td> MCA </td>
+                <td> Bangalore </td>
+                <td rowspan="3"> 2010 </td>
+                <td rowspan="4" valign="middle"> 16-06-2023 </td>
+                <!----without valign the date will be in middle by default-->
+            </tr>
+
+            <tr>
+                <td> 02 </td>
+                <td> Sumit </td>
+                <td> 76788726427 </td>
+                <td> BCA </td>
+                <td> Chennai </td>
+                <!---space is covered by previous tr td-->
+            </tr>
+
+            <tr>
+                <td> 03 </td>
+                <td> Sameer </td>
+                <td> 444444444 </td>
+                <td> BE </td>
+                <td> Pune </td>
+                <!---space is covered by previous tr td--> 
+            </tr>
+
+            <tr>
+                <td> 04 </td>
+                <td colspan="2"> Ranbeer </td>
+                <td> B.A </td>
+                <td> Kolkatta </td>
+                <td> 2015</td>
+            </tr>
+
+                
+
+            
+
+         </table>
+            
+
+    </body>
+</html>    

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    
+    <script>
+        let itemlist=["Water", "Apple" , "Milk","CHICKEN","Biryani"]; // global variable
+      
+        const getitem=()=>{
+        let temp="";
+        itemlist.map((itemname,index)=>{
+            temp=temp+"<tr>";
+            temp=temp + "<td>" + index + "</td>";
+            temp=temp + "<td>" + itemname + "</td>";
+            temp=temp + "<td> <button onclick=getdel()> Delete </button> </td>";
+            temp=temp+"</tr>";
+       })
+       
+        document.getElementById("container").innerHTML=temp;
+        
+     }
+     const save=()=>{
+     let itemname=document.getElementById("newitem").value;
+     itemlist.push(itemname); // adding new element at the end of array
+      alert(itemname+ "Added in list");
+     document.getElementById("newitem").value=""; //how to clear input feild
+     getitem();//calling back to reload the listafter adding new item
+} 
+
+
+    </script>
+ </head>
+ <body onload="getitem()">
+    <h1> Array, add, list, delete, USING javascript </h1>
+    <p>
+        Enter the item name:<input type="text" id="newitem"/>
+        <button onclick="save()"> Save item</button>
+        <button onclick="getitem()"> Item List</button>
+ </p>
+ <h2> Available Items </h2>
+<table cellpadding="15" cellspacing="0" border="1" widh="500">
+    <thead>
+        <tr bgcolor="orange">
+            <th> Sl No</th>
+            <th> Item Name</th>
+            <th> Action </th>
+        </tr>
+    </thead>
+ <tbody id="container">
+    
+ </tbody>
+ 
+ <tfoot bgcolor="grey">
+    <th> Sl No</th>
+    <th> Item Name</th>
+    <th> Action </th>
+ </tfoot>
+</table>
+ </body>
+</html>

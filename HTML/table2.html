@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> what is colspan in table ?</title>
+        <body>
+            
+            <table align="center" cellpadding="13" border="1" cellspacing="0">
+               <Caption> 
+                <h1> COLSPAN -Example </h1>
+               </Caption>  
+               <tr>
+                <th> Sl No </th>
+                <th> Full Name </th>
+                <th> Mobile No </th>
+                <th> Education </th>
+                <th> City     </th>
+                <th> Passing Year</th>
+               </tr>
+
+               <tr>
+                <td> 01 </td>
+                <td> Mrs Taneem </td>
+                <td> 4454666676 </td>
+                <td> B.tech </td>
+                <td> Bangalore </td>
+                <td> 2015 </td>
+            </tr>
+
+            <tr>
+                <td> 02 </td>
+                <td> Mr.Umair </td>
+                <td> 738482428 </td>
+                <td> BCA </td>
+                <td colspan="2"> Chennai </td>
+                <!---td is missing-->
+            </tr>
+
+            <tr>
+              <td> 03 </td>
+              <td> Inaaya </td>
+              <td colspan="3"> 74637463 </td>
+              <!---education and city is missing-->
+              <td> 2011 </td>
+          </tr>
+
+          <tr>
+            <td> 04 </td>
+            <td colspan="5 "> Inaam </td>
+            <!--mobile no, city, education, passing year is missing-->
+          </tr>
+
+
+          <tr>
+            <td> 05 </td>
+            <td> Azlaan </td>
+            <td> 736438463</td>
+            <td> B.com </td>
+            <td> Delhi </td>
+            <td> 2019 </td>
+          </tr>
+            </table>
+            <caption>
+        </body>
+    </head>
+</html>

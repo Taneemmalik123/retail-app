@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            fieldset{
+                width: 400px;
+                display: inline-block;
+                margin: 30px;
+                border: 5px solid blue;
+                padding:20px;
+                vertical-align:top;
+            }
+
+            legend{
+                background-color: red;
+                color: white;
+                padding: 8px;
+                font-size: 25px;
+            }
+        </style>
+        <script>
+           const one =() =>{
+            let name = document.getElementById("fullname").value;
+            //alert(name);
+            document.getElementById("myname").innerText=name;
+
+            let mobile=document.getElementById("mobile").value;
+            document.getElementById("mymobile").innerText=mobile;
+
+            let email=document.getElementById("email-id").value;
+            document.getElementById("myemail").innerText=email;
+
+            let education=document.getElementById("education").value;
+            document.getElementById("myeducation").innerText=education;
+
+            
+            let address=document.getElementById("address").value;
+            document.getElementById("myaddress").innerText=education;
+              
+          }
+        </script>
+    </head>
+    <body>
+        <fieldset>
+            <legend> Enter Your Deatils</legend>
+            <p> Enter Name : <input type="text" id="fullname" onkeyup="one()"/>  </p>
+            <p> Mobile No: <input type="number" id="mobile" onkeyup="one()"/>  </p>
+            <p> Email-Id: <input type="email" id="email-id" onkeyup="one()"/> </p>
+            <p> Education: <input type="text" id="education" onkeyup="one()"/>  </p>
+            <p> <textarea id="address" cols="30" onkeyup="one()"></textarea></p>
+        
+        </fieldset>
+
+        <fieldset>
+            <legend> Your Details </legend>
+            <p id="myname"></p>
+    <p id="mymobile"></p>
+    <p id="myemail"></p>
+    <p id="myeducation"></p>
+    <p id="myaddress"></p>
+
+        </fieldset>
+    </body>
+</html>

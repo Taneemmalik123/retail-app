@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="dist/css/bootstrap.css"/>
+     <script>
+        const gethome=()=>{
+            var xmlhttp = new XMLHttpRequest();//create object of XMLHttprequest class
+            xmlhttp.open("GET","home.html");//it generate URL based on GET mathod
+            xmlhttp.send();//sending request to above generated URL
+            xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("ajaxdata").innerHTML = this.responseText;//capture the response
+      }
+    };
+     }
+
+     const getabout=()=>{
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET","about.html");
+            xmlhttp.send();
+            xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("ajaxdata").innerHTML = this.responseText;
+      }
+    };
+     }
+
+     const getcontact=()=>{
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET","contact.html");
+            xmlhttp.send();
+            xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("ajaxdata").innerHTML = this.responseText;
+      }
+    };
+     }
+     </script>
+    </head>
+    <body>
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-lg-3 text-center text-danger">
+                    <h1> AJAX </h1>
+                </div>
+                <div class="col-lg-9 text-end">
+                    <div class="btn-group">
+                        <button class="btn btn-primary" onclick="gethome()"> Home </button>
+                        <button class="btn btn-info" onclick="getabout()"> About Us </button>
+                        <button class="btn btn-success" onclick="getcontact()"> Contact Us </button>
+                        <button class="btn btn-warning" onclick="getservice()"> Our Services </button>
+                        <button class="btn btn-danger" onclick="getproject()"> Recent Project </button>
+                        <button class="btn btn-dark" onclick="getclient()"> Our Client </button>
+                    </div>
+                </diAv>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="p-4 shadow-lg rounded">
+                        <h3> Office Address </h3>
+                        <address>
+                            #123, Infocampus Logics Pvt Ltd.
+                            Outer ring road marathahalli
+                            bangalore 560037
+                        </address>
+                    </div>
+                    <div class="mt-5 p-4 shadow-lg rounded">
+                        <h3> Contact Us </h3>
+                        <p> +91-8884166608 </p>
+                        <p> +91-9738001024 </p>
+                    </div>
+                </div>
+                <div class="col-lg-9" id="ajaxdata">
+                    <h1 class="text-center text-primary"> Data will come here </h1>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-5 bg-info text-white p-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 text-center">
+                        <h4> About Ajax </h4>
+                        <p> Ajax - Asynchronous JavaScript and XML </p>
+                        <p> It use to read the data from server without refreshing whole page </p>
+                    </div>
+                     <div class="col-lg-4">
+                        <h4> How To Contact Us </h4>
+                        <p>
+                            #123, Infocampus logic Pvt lmt
+                            Outer ring road marathahalli
+                            bangalore-563645
+                        </p>
+
+                     </div>
+                </div>
+            </div>
+
+        </footer>
+
+    </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{ margin:0px; }
+
+            /* Animation Start */
+            @keyframes mybanner{
+                25%{  background-image: url("2.jpg"); font-size:30px;}
+                50%{  background-image: url("3.jpg"); font-size:60px;}
+                75%{  background-image: url("4.jpg"); font-size:80px;}
+            }
+            /* Animation End */
+
+            #banner{
+                height:300px;
+                padding:100px;
+                background-image: url("1.jpg");
+                background-size: 100% 100%;
+                text-align: center;
+                font-size: 100px;
+                color:white;
+                animation:mybanner;
+                animation-duration:10s;
+                animation-iteration-count: infinite;
+            }
+
+            ul{
+                background-color: purple;
+                margin:0px;
+                position:sticky;
+                top:0px;
+            }
+
+            ul li{
+                display: inline-block;
+                color:white;
+                font-size: 25px;
+                padding:15px 40px 15px;
+            }
+
+            ul li:hover{
+                background-color:orange;
+                color:green;
+                cursor: pointer;
+            }
+
+            #title{
+                color:red;
+                font-size: 70px;
+                text-align:center;
+            }
+
+            #service{
+                width:80%;
+                margin:auto;
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 100px;
+            }
+
+            #service div{
+                margin:40px;
+                font-size:30px;
+                color:blue;
+            }
+
+            footer{
+                margin-top:100px;
+                background-color: indigo;
+                color:white;
+                padding:20px;
+                text-align:center;
+                height: 150px;
+                font-size: 20px;
+            }
+            marquee{
+                padding:15px;
+                font-size:20px;
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <marquee>
+            For Any Query Please Contact Us +91-8884166608 
+        </marquee>
+        <ul>
+            <li> Home </li>
+            <li> About Us </li>
+            <li> Contact Us </li>
+            <li> Our Services </li>
+            <li> Product </li>
+            <li> Register </li>
+            <li> Login </li>
+        </ul>
+        <section id="banner"> This is CSS Animated Banner </section>
+
+        <h1 id="title"> Our Services </h1>
+        <section id="service">
+            <div> Software Development </div>
+            <div> Online Marketing</div>
+            <div> Offline Marketing </div>
+            <div> Leads Management </div>
+            <div> Home Service </div>
+            <div> Painting Service </div>
+            <div> Education </div>
+            <div> Employment </div>
+            <div> App Development </div>
+            <div> Website Design </div>
+            <div> Business Branding </div>
+            <div> Digital Marketing </div>
+            <div> Hire & Deploy </div>
+        </section>
+
+        <footer>
+            <p> Help Center - 800000000</p>
+        </footer>
+    </body>
+</html>
